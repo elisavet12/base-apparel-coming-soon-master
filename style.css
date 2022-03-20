@@ -92,7 +92,7 @@ input:required:invalid {
   background: linear-gradient(to left top, var(--pale-pink), var(--pink));
   border: none;
   position: relative;
-  left: -50%;
+  /* left: -50%; */
 }
 .card-image {
 }
@@ -102,13 +102,19 @@ input:required:invalid {
   display: block;
 }
 
+#form {
+  isplay: flex;
+  align-items: center;
+  align-content: center;
+}
+
 #form-container {
   display: flex;
 
   width: 300px;
-  margin: 20vh auto 0 auto;
+  /* margin: 20vh auto 0 auto; */
   padding: 20px;
-  background-color: whitesmoke;
+
   border-radius: 4px;
   font-size: 12px;
 }
@@ -119,7 +125,7 @@ input:required:invalid {
   width: 450px;
 }
 
-.input-control {
+/* .input-control {
   display: flex;
   flex-direction: column;
 }
@@ -149,4 +155,23 @@ input:required:invalid {
   color: #ff3860;
   font-size: 9px;
   height: 13px;
+} */
+
+h1 {
+  color: green;
+}
+.container {
+  padding: 15px;
+  width: 400px;
+}
+
+label,
+input {
+  margin-bottom: 10px;
+}
+
+button {
+  float: right;
+  margin-right: 10px;
+  background-color: green;
 }

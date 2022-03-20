@@ -49,33 +49,39 @@
                 store. Add your email below to stay up-to-date with
                 announcements and our launch deals.
               </p>
-            </div>
+            
             <div id="form-container">
               <form action="/action_page.php" class="form-action" id="form">
                 <div class="input-control">
-                <label id="email-label" for="email"></label>
-                <input
+                <!-- <label id="email-label" for="email"></label> -->
+                <label>Phone no:</label>
+                <input type="text"
+                       id="number" size="40">
+                <!-- <input
                   id="email"
                   class="box"
                   type="email"
                   placeholder="Email Address"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   required
-                />
-                <div class="error"></div>
+                /> -->
+                <span id="error"></span>
+                <!-- <input type="text=" id="mail"><input type="button" id="k" value="check" onclick="validEmail()">
+                <div class="error">Please provide a valid email</div> -->
                 </div>
-              </div>
-                <div class="test">
-                  <button type="submit" class="submit">
+              <button type="submit" class="submit" onclick="errorMessage()>
                     <img
                       src="./images/icon-arrow.svg"
                       alt="arrow"
                       class="submit-icon"
                     />
                   </button>
-                  <p class="empty-email-message"></p>
-                  <p class="invalid-email-message"></p>
-                </div>
+              </div>
+                <!-- <div class="test"> -->
+                  
+                  <!-- <p class="empty-email-message"></p>
+                  <p class="invalid-email-message"></p> -->
+                <!-- </div> -->
               </form>
             </div>
           </div>
@@ -84,6 +90,7 @@
           </div>
         </div>
       </div>
+      
     </main>
 
     <footer>
@@ -94,5 +101,7 @@
         >. Coded by <a href="#">Elisavet 🌸</a>.
       </p>
     </footer>
+
+    <script src="./index.js"></script>
   </body>
 </html>
