@@ -14,7 +14,7 @@
 body {
   font-family: "Josefin Sans";
   font-size: 16px;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   box-sizing: border-box;
   justify-content: center;
   margin: 0;
@@ -24,25 +24,26 @@ body {
   justify-content: center;
 }
 
-#container {
+/* #container {
   margin: 0 auto;
   box-sizing: border-box;
-  /* width: min(920px, 90vw); */
+  
   border: 1px solid;
-}
+} */
 
 .card {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 1fr 1fr;
   background-image: url(./images/bg-pattern-desktop.svg);
 }
 
 .card-info {
-  padding: 60px 164px;
+  /* padding: 60px 164px; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin: 0px 86px;
   /* background: linear-gradient(135deg, var(--white1), var(--white2)),
     linear-gradient(135deg, var(--pale-pink), var(--pink)); */
 }
@@ -52,6 +53,7 @@ body {
   font-weight: 300;
   color: var(--Desaturated-Red);
   text-transform: uppercase;
+  width: 12ch;
 }
 
 .title-bold {
@@ -74,6 +76,23 @@ body {
   padding: 12px 24px;
   border-radius: 28px;
   display: inline-flex;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-input {
+  background-image: url(./images/icon-error.svg);
+  padding: 0px 25px 0px 25px;
+  background-size: 20px;
+  background-repeat: no-repeat;
 }
 
 #email {
@@ -175,3 +194,17 @@ input {
   margin-right: 10px;
   background-color: green;
 } */
+
+.error-img {
+  /* visibility: hidden; */
+}
+
+@media only screen and (max-width: 720px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    order: -1;
+  }
+}
