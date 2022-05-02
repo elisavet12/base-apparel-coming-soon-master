@@ -1,5 +1,5 @@
 let errorIcon = document.querySelector(".error-img");
-let warning = document.querySelector(".error");
+let warning = document.querySelector("p.error");
 let button = document.querySelector(".submit");
 let input = document.querySelector("input");
 let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -11,8 +11,10 @@ button.addEventListener("click", (event) => {
     input.style.outline = "yellowgreen solid 2px";
   } else {
     errorIcon.style.display = "block";
-    warning.innerText = "Please provide a valid email";
+    // warning.innerText = "Please provide a valid email"; //
+    // document.getElementsByClassName.style.display = "block";//
     input.style.outline = "red solid 2px";
+    warning.style.display = "block";
   }
 });
 input.addEventListener("keydown", (keyboardEvent) => {

@@ -39,13 +39,16 @@ body {
 
 .card-info {
   /* padding: 60px 164px; */
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   align-items: flex-start;
   justify-content: space-around;
   margin: 0px 86px;
   /* background: linear-gradient(135deg, var(--white1), var(--white2)),
     linear-gradient(135deg, var(--pale-pink), var(--pink)); */
+
+  display: grid;
+  align-items: center;
 }
 
 .main-title {
@@ -79,8 +82,10 @@ body {
 }
 
 form {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .form-container {
@@ -89,10 +94,12 @@ form {
 }
 
 .email-input {
-  background-image: url(./images/icon-error.svg);
-  padding: 0px 25px 0px 25px;
+  padding: 10px 25px 10px 25px;
   background-size: 20px;
   background-repeat: no-repeat;
+  width: 400px;
+  position: relative;
+  border-radius: 28px;
 }
 
 #email {
@@ -107,13 +114,21 @@ input:required:invalid {
   width: 100px;
   max-width: 100px;
   /* width: 100%; */
-  padding: 12px 24px;
+  padding: 24px 24px;
   background: linear-gradient(to left top, var(--pale-pink), var(--pink));
   border: none;
   position: relative;
   /* left: -50%; */
+  /* position: fixed; */
+  right: 136%;
+}
+
+.error {
+  display: none;
+  color: var(--Soft-Red);
 }
 .card-image {
+  display: block;
 }
 
 .image {
@@ -142,6 +157,11 @@ input:required:invalid {
   display: flex;
   /* max-width: 360px; */
   width: 450px;
+}
+
+.button-arrow {
+  text-align: center;
+  display: inline-block;
 }
 
 /* .input-control {
@@ -186,7 +206,7 @@ h1 {
 
 label,
 input {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 /* button {
@@ -196,7 +216,7 @@ input {
 } */
 
 .error-img {
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 @media only screen and (max-width: 720px) {
