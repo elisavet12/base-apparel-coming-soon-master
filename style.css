@@ -87,6 +87,8 @@ form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 0;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .form-container {
@@ -115,13 +117,14 @@ input:required:invalid {
   width: 100px;
   max-width: 100px;
   /* width: 100%; */
-  padding: 24px 24px;
+  padding: 20px 20px;
   background: linear-gradient(to left top, var(--pale-pink), var(--pink));
   border: none;
-  position: relative;
+  /* position: relative; */
   /* left: -50%; */
-  /* position: fixed; */
-  right: 136%;
+  position: fixed;
+  /* right: 136%; */
+  left: 394px;
 }
 
 .error {
@@ -227,6 +230,8 @@ input {
   left: 424px;
   display: block;
   visibility: visible;
+  osition: relative;
+  left: -145px;
 }
 
 @media only screen and (max-width: 720px) {
