@@ -17,11 +17,11 @@ body {
   /* max-width: 1440px; */
   box-sizing: border-box;
   justify-content: center;
-  margin: 0;
-  min-height: 100vh;
-  display: grid;
+  /* margin: 0 auto;
+  min-height: 100vh; */
+  /* display: grid;
   align-content: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 /* #container {
@@ -35,6 +35,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-image: url(./images/bg-pattern-desktop.svg);
+  margin: 0 auto;
+  min-height: 100vh;
+  align-content: center;
 }
 
 .card-info {
@@ -52,11 +55,15 @@ body {
 }
 
 .main-title {
-  font-size: 70px;
+  font-size: 60px;
+  letter-spacing: 0.18em;
   font-weight: 300;
   color: var(--Desaturated-Red);
   text-transform: uppercase;
   width: 12ch;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: inline-block;
 }
 
 .title-bold {
@@ -87,8 +94,9 @@ form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 0;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  align-self: start;
+  /* margin-bottom: 50px;
+  margin-top: 50px; */
 }
 
 .form-container {
@@ -97,7 +105,7 @@ form {
 }
 
 .email-input {
-  padding: 10px 25px 10px 25px;
+  padding: 0px 25px 0px 25px;
 
   width: 400px;
   position: relative;
@@ -117,19 +125,21 @@ input:required:invalid {
   width: 100px;
   max-width: 100px;
   /* width: 100%; */
-  padding: 20px 20px;
+  padding: 14px 20px;
   background: linear-gradient(to left top, var(--pale-pink), var(--pink));
   border: none;
-  /* position: relative; */
+  position: relative;
   /* left: -50%; */
-  position: fixed;
+  /* position: fixed; */
   /* right: 136%; */
-  left: 394px;
+  /* left: 394px; */
+  transform: translate(-58px, 0px);
 }
 
 .error {
   display: none;
   color: var(--Soft-Red);
+  transform: translate(10px, 28px);
 }
 .card-image {
   display: block;
@@ -138,6 +148,10 @@ input:required:invalid {
 .image {
   width: 100%;
   display: block;
+}
+
+.image-mb {
+  display: none;
 }
 
 #form {
@@ -234,12 +248,33 @@ input {
   left: -145px;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1100px) {
   .card {
     grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .card-info {
+    justify-items: center;
   }
 
   .card-image {
     order: -1;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .image-mb {
+    display: inline-block;
+  }
+
+  .main-title {
+    text-align: center;
+  }
+
+  .main-pg {
+    text-align: center;
   }
 }
