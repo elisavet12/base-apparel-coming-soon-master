@@ -1,4 +1,4 @@
-let errorIcon = document.querySelector("img.error-img");
+// let errorIcon = document.querySelector("img.error-img");
 let errorActive = document.querySelector("img.error-img-active");
 let warning = document.querySelector("p.error");
 let button = document.querySelector(".submit");
@@ -12,12 +12,12 @@ button.addEventListener("click", (event) => {
     warning.innerText = "";
     // input.style.outline = "yellowgreen solid 2px";
   } else {
-    errorIcon.style.display = "block";
+    errorActive.style.display = "block";
     // warning.innerText = "Please provide a valid email"; //
     // document.getElementsByClassName.style.display = "block";//
     input.style.outline = "hsl(0, 93%, 68%) solid 1px";
     warning.style.display = "block";
-    errorActive.classList.add("error-img-active");
+    // errorActive.classList.add("error-img-active");
   }
 });
 input.addEventListener("keydown", (keyboardEvent) => {
